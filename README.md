@@ -1,0 +1,1 @@
+# solo-leveling-arise-linux-fix
