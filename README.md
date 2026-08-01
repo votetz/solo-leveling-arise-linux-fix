@@ -1,5 +1,7 @@
 # Solo Leveling: ARISE — Linux Direct Launch Fix (Lutris) ⚔️🎮
 
+![Solo Leveling Arise Linux Fix](preview.png)
+
 This repository provides a custom **Lutris YAML installer** for running **Solo Leveling: ARISE** seamlessly on Linux (Arch Linux, Steam Deck, Ubuntu, Fedora, etc.), specifically targeting NVIDIA/Intel hybrid graphics setups.
 
 ---
