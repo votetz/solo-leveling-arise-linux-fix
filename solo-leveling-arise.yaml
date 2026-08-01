@@ -1,0 +1,37 @@
+name: 'Solo Leveling: ARISE'
+game_slug: solo-leveling-arise
+version: Direct Launch Fix (Arch/NVIDIA)
+slug: solo-leveling-arise-standalone
+runner: wine
+
+script:
+  game:
+    exe: drive_c/Program Files/Netmarble/Netmarble Game/sololv/Solo_Leveling_ARISE.exe
+    prefix: $GAMEDIR
+
+  system:
+    disable_runtime: true
+    prefer_system_libs: true
+
+  wine:
+    dxvk: true
+    vkd3d: true
+    esync: true
+    fsync: true
+    overrides:
+      dxgi: n,b
+      d3d11: n,b
+
+  installer:
+  - task:
+      name: create_prefix
+      prefix: $GAMEDIR
+      arch: win64
+  - get_sources:
+      url: https://netmarble.com/
+      filename: NetmarbleLauncher_Setup.exe
+  - task:
+      name: wineexec
+      executable: NetmarbleLauncher_Setup.exe
+      prefix: $GAMEDIR
+      description: "Install Netmarble Launcher and download the game. Once the download completes, DO NOT click 'Run Game', simply close the launcher."
